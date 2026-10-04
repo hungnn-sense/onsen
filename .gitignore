@@ -1,0 +1,13 @@
+# Kết quả do người dùng sinh ra — KHÔNG commit (giữ lại thư mục trống)
+brain-template/ket-qua/*
+!brain-template/ket-qua/.gitkeep
+
+# (Bundle knowledge adapters/onsen-knowledge-bundle.md được COMMIT kèm repo để học
+#  viên không rành kỹ thuật tải thẳng lên ChatGPT/Gemini. Chạy build-bundle.sh để cập nhật.)
+
+# Rác hệ thống
+.DS_Store
+*.log
+
+# Ghi chú: brain-template/doanh-nghiep.md và chien-dich/_mau-chien-dich.md là TEMPLATE,
+# vẫn commit kèm repo để người mới clone về có sẵn khung điền.
