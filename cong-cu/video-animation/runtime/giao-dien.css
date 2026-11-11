@@ -1,0 +1,97 @@
+/* ===== Onsen video animation — giao diện (2 phong cách) =====
+   Màu thương hiệu đến từ video.json → --chinh, --phu (dong-co.js gán). Không gõ màu thương hiệu ở đây. */
+#root{
+  --chinh:#2563EB; --phu:#60A5FA;
+  --grad:linear-gradient(135deg,var(--chinh) 0%,var(--phu) 100%);
+  --nen-sang:#F8FAFC; --nen-toi:#0B1220;
+  --chu:#0F172A; --chu-phu:#64748B; --vien:#E2E8F0; --o-nhat:#EEF2F7;
+  --the:#FFFFFF; --bo:28px; --bong:0 40px 90px rgba(15,23,42,.14);
+  --sai:#DC2626; --dung:#16A34A;
+  --font-td:'Inter',sans-serif; --w-td:800; --gian-td:-.03em;
+  --font:'Inter',sans-serif;
+  --cap-chu:#0F172A; --cap-nhan:var(--chinh);
+  position:relative; width:1080px; height:1920px; overflow:hidden;
+  font-family:var(--font); color:var(--chu); background:var(--nen-sang);
+}
+#root.sang-trong{
+  --nen-sang:#F5EFE4; --nen-toi:#1A1714;
+  --chu:#1F1B16; --chu-phu:#7A6F62; --vien:#D8CCB8; --o-nhat:#EDE4D3;
+  --the:#FFFCF6; --bo:6px; --bong:0 18px 44px rgba(31,27,22,.10);
+  --sai:#A33A2A; --dung:#4F7A4A;
+  --font-td:'Playfair Display',serif; --w-td:600; --gian-td:-.01em;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#000}
+
+/* nền */
+#nenSang,#nenToi{position:absolute;inset:0}
+#nenSang{background:radial-gradient(1100px 900px at 85% 8%,color-mix(in srgb,var(--chinh) 10%,transparent),transparent 70%),
+  radial-gradient(900px 900px at 0% 100%,color-mix(in srgb,var(--phu) 10%,transparent),transparent 70%),var(--nen-sang)}
+#nenToi{background:radial-gradient(1000px 1000px at 50% 30%,color-mix(in srgb,var(--chinh) 34%,transparent),transparent 70%),var(--nen-toi);opacity:0}
+.sang-trong #nenSang{background:var(--nen-sang)}
+.sang-trong #nenSang::after{content:"";position:absolute;inset:60px;border:1px solid var(--vien)}
+
+.canh{position:absolute;inset:0;opacity:0;z-index:10}
+.abs{position:absolute}
+
+/* chữ */
+.h1{position:absolute;left:70px;width:940px;text-align:center;font-family:var(--font-td);font-weight:var(--w-td);
+  letter-spacing:var(--gian-td);line-height:1.04;color:var(--chu)}
+.toi .h1{color:#fff}
+.h1 .k{color:var(--chinh)} .toi .h1 .k{color:var(--phu)}
+.kick{position:absolute;left:70px;width:940px;text-align:center;font-size:34px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--chu-phu)}
+.toi .kick{color:rgba(255,255,255,.72)}
+.sang-trong .kick{font-weight:500;letter-spacing:.24em;font-size:30px}
+.lab{font-size:26px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--chu-phu)}
+.ghi{position:absolute;left:0;width:1080px;text-align:center;font-size:24px;color:var(--chu-phu);font-style:italic}
+
+/* thẻ */
+.c{position:absolute;background:var(--the);border:1px solid var(--vien);border-radius:var(--bo);box-shadow:var(--bong);overflow:hidden}
+.toi .c{border-color:rgba(255,255,255,.12)}
+.row{display:flex;align-items:center}
+.av{width:72px;height:72px;border-radius:50%;background:var(--grad);flex:none;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:800;font-size:34px}
+.sang-trong .av{border-radius:4px}
+.badge{min-width:64px;height:56px;padding:0 16px;border-radius:28px;background:var(--sai);color:#fff;font-weight:800;font-size:32px;
+  display:flex;align-items:center;justify-content:center}
+.bubble{padding:18px 26px;border-radius:26px 26px 26px 8px;background:var(--o-nhat);font-size:32px;font-weight:500;line-height:1.25}
+.bubble.me{align-self:flex-end;border-radius:26px 26px 8px 26px;background:var(--grad);color:#fff}
+.sang-trong .bubble{border-radius:4px} .sang-trong .bubble.me{background:var(--chu)}
+.tile{width:450px;height:240px;padding:30px 34px}
+.tile .v{font-family:var(--font-td);font-weight:var(--w-td);font-size:92px;letter-spacing:-.03em;line-height:1.05;margin-top:10px;color:var(--chu)}
+.tile .s{font-size:24px;color:var(--chu-phu);margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:800;color:#fff;background:var(--grad)}
+.sang-trong .btn{border-radius:2px;background:var(--chu);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.item{display:flex;align-items:flex-start;gap:24px;font-size:40px;font-weight:600;line-height:1.25}
+.mark{flex:none;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;font-weight:800;margin-top:-2px}
+.mark.ok{background:var(--dung)} .mark.x{background:var(--sai)}
+.sang-trong .mark{border-radius:2px}
+.chip{display:inline-block;padding:10px 24px;border-radius:999px;background:var(--chu);color:#fff;font-size:26px;font-weight:700;white-space:nowrap}
+.sang-trong .chip{border-radius:2px;font-weight:500;letter-spacing:.08em}
+.qm{position:absolute;font-family:var(--font-td);font-weight:var(--w-td);color:var(--chinh);line-height:1}
+.stamp{position:absolute;left:0;width:1080px;text-align:center}
+.stamp span{display:inline-block;padding:18px 54px;border:12px solid var(--sai);border-radius:22px;color:var(--sai);
+  font-size:130px;font-weight:900;font-family:var(--font);letter-spacing:.04em;text-transform:uppercase;transform:rotate(-8deg)}
+.sang-trong .stamp span{border-width:4px;border-radius:0;font-family:var(--font-td);font-weight:600;letter-spacing:.12em;font-size:110px}
+.mini{position:absolute;width:300px;height:190px;background:rgba(255,255,255,.9);border-radius:var(--bo)}
+.logo-img{max-width:100%;max-height:100%;object-fit:contain;display:block;margin:0 auto}
+.ph{background:repeating-linear-gradient(135deg,var(--o-nhat) 0 22px,var(--the) 22px 44px);display:flex;align-items:center;justify-content:center}
+
+/* nhãn cảnh */
+#nhan{position:absolute;left:0;top:150px;width:1080px;height:80px;z-index:40}
+#nhan span{position:absolute;left:50%;transform:translateX(-50%);display:inline-flex;gap:14px;align-items:center;white-space:nowrap;
+  padding:14px 30px;border-radius:999px;background:var(--the);border:1px solid var(--vien);box-shadow:0 10px 30px rgba(15,23,42,.08);
+  font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--chu);opacity:0}
+.sang-trong #nhan span{border-radius:0;font-weight:500;letter-spacing:.22em}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--chinh);display:inline-block}
+
+/* phụ đề */
+#phude{position:absolute;left:60px;right:60px;bottom:380px;height:180px;z-index:50}
+.cap{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:58px;font-weight:800;line-height:1.18;color:var(--cap-chu);
+  opacity:0;text-shadow:0 2px 18px rgba(0,0,0,.08)}
+.sang-trong .cap{font-family:var(--font-td);font-weight:600;font-size:56px}
+.cap .k{color:var(--cap-nhan)}
+
+/* con trỏ */
+.cursor{position:absolute;left:0;top:0;width:64px;height:64px;z-index:60;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25))}

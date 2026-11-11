@@ -1,0 +1,16 @@
+{
+  "name": "onsen-video-animation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dựng video animation (thẻ giao diện + lời dẫn) và xuất MP4 bằng HyperFrames",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "kiem-tra": "node onsen-video.mjs kiem-tra"
+  },
+  "dependencies": {
+    "@ffprobe-installer/ffprobe": "2.1.2",
+    "ffmpeg-static": "5.2.0",
+    "hyperframes": "0.9.31"
+  }
+}

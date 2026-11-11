@@ -1,0 +1,49 @@
+{
+  "ten": "mau-nen-thom",
+  "phong_cach": "hien-dai",
+  "thuong_hieu": {
+    "ten": "Nến Mộc",
+    "mau_chinh": "#B45309",
+    "mau_phu": "#F59E0B",
+    "logo": "",
+    "lien_he": "fb.com/nenmoc"
+  },
+  "giong": "",
+  "nhac": "",
+  "canh": [
+    {
+      "loi": "Mỗi tháng shop nhận cả {trăm tin nhắn} hỏi giá.",
+      "kieu": "so-lon", "so": 200, "don_vi": "tin", "dong_phu": "tin nhắn hỏi giá mỗi tháng"
+    },
+    {
+      "loi": "Khách hỏi xong rồi im lặng, đơn chốt được chẳng bao nhiêu.",
+      "kieu": "tin-nhan", "nhan": "Tin nhắn · Đơn hàng", "tieu_de": "Tin nhắn", "dem": 24,
+      "tin": ["Nến này giá sao shop?", "Dạ 189k ạ", "Mùi nào dễ ngủ nhất?", "Dạ chị thử oải hương nha"],
+      "the_duoi": { "tieu_de": "Đơn chốt", "so": "3", "ghi_chu": "trên 24 tin nhắn · minh hoạ", "xau": true }
+    },
+    {
+      "loi": "Vì khách chưa biết mùi nào hợp với mình, lại sợ mua về không thơm như ảnh.",
+      "kieu": "cau-hoi", "nhan": "Khách đang phân vân",
+      "cau": ["Mùi nào {hợp với mình}?", "Về nhà có thơm như ảnh?"]
+    },
+    {
+      "loi": "Thay vì gửi bảng giá, hãy gợi ý {theo nhu cầu}: khó ngủ, thư giãn hay khử mùi bếp.",
+      "kieu": "so-sanh", "nhan": "Đổi cách trả lời",
+      "trai": { "tieu_de": "Gửi bảng giá", "muc": ["Khách tự đọc, tự chọn", "Hỏi xong rồi im"] },
+      "phai": { "tieu_de": "Gợi ý theo nhu cầu", "muc": ["Khó ngủ → oải hương", "Bếp → cam sả"] }
+    },
+    {
+      "loi": "Đơn đầu tiên tặng kèm {mẫu thử hai mùi}, gói quà sẵn.",
+      "kieu": "danh-sach", "nhan": "Ưu đãi đơn đầu", "tieu_de": "Đơn đầu tiên", "dau": "tich",
+      "muc": ["Mẫu thử 2 mùi", "Gói quà sẵn", "Đổi mùi trong 7 ngày"]
+    },
+    {
+      "loi": "Combo ba hũ nến, giá {chỉ 459 nghìn}.",
+      "kieu": "san-pham", "ten": "Combo 3 hũ nến thơm", "gia": "459.000đ", "gia_cu": "567.000đ",
+      "nhan_dan": "-19%", "nut": "Nhắn tin đặt hàng", "anh": ""
+    },
+    {
+      "kieu": "ket", "cta": "Nhắn tin cho Nến Mộc", "dong_phu": "Nến thơm handmade", "thoi_luong": 3.2
+    }
+  ]
+}
